@@ -1,5 +1,6 @@
 package fr.eni.cave.bo;
 
+import fr.eni.cave.bo.client.Adresse;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -29,6 +30,16 @@ public class Client {
     @Column(name = "first_name")
     @EqualsAndHashCode.Exclude
     private String prenom;
+
+    @OneToOne(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Adresse adresse;
+
+    public void setAdresse(Adresse adresse) {
+        this.adresse = adresse;
+        if(this.adresse != null) {
+            adresse.setClient(this);
+        }
+    }
 
 
 }
