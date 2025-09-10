@@ -4,29 +4,25 @@ import fr.eni.cave.bo.Client;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
-@Data
-@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 @NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = {"id"})
 @Builder
-@Table(name = "cav_adress")
+@Entity
+@Table(name = "CAV_ADDRESS")
 public class Adresse {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "adress_id")
-    private Integer id;
-
-    @Column(name = "street")
-    private String rue;
-
-    @Column(name = "postal_code")
-    private String codePostal;
-
-    @Column(name = "city")
-    private String ville;
-
-    @ToString.Exclude
-    @OneToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-    @JoinColumn(name = "client_id")
-    private Client client;
+    @Column(name = "ADDRESS_ID")
+    Integer id;
+    @Column(name = "STREET")
+    String rue;
+    @Column(name = "POSTL_CODE")
+    String codepostal;
+    @Column(name = "CITY")
+    String ville;
 }
+

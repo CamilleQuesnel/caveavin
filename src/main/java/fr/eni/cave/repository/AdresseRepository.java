@@ -8,5 +8,4 @@ import java.util.List;
 
 @Repository
 public interface AdresseRepository extends JpaRepository<Adresse, Integer> {
-    Adresse findByClientNom(String nom);
 }

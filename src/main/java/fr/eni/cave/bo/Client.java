@@ -4,42 +4,32 @@ import fr.eni.cave.bo.client.Adresse;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Entity
 @Getter
 @Setter
-@EqualsAndHashCode
-@AllArgsConstructor
-@NoArgsConstructor
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = {"pseudo"})
 @Builder
-@Table(name="cav_client")
+@Entity
+@Table(name="CAV_CLIENT")
 public class Client {
     @Id
-    @Column(name = "login", unique = true, nullable = false)
+    @Column(name="LOGIN", unique=true, nullable=false)
     private String pseudo;
 
-    @Column (name = "password")
     @ToString.Exclude
-    @EqualsAndHashCode.Exclude
+    @Column(name="PASSWORD")
     private String password;
 
-    @Column(name = "last_name")
-    @EqualsAndHashCode.Exclude
+    @Column(name="LAST_NAME")
     private String nom;
 
-    @Column(name = "first_name")
-    @EqualsAndHashCode.Exclude
+    @Column(name="FIRST_NAME")
     private String prenom;
 
-    @OneToOne(mappedBy = "client", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER,orphanRemoval = true)
+    @JoinColumn(name = "ADDRESS_ID")
     private Adresse adresse;
-
-    public void setAdresse(Adresse adresse) {
-        this.adresse = adresse;
-        if(this.adresse != null) {
-            adresse.setClient(this);
-        }
-    }
-
-
 }
+
