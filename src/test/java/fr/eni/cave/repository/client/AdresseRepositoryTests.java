@@ -1,4 +1,4 @@
-package fr.eni.cave.repository;
+package fr.eni.cave.repository.client;
 
 import fr.eni.cave.bo.client.Client;
 import fr.eni.cave.bo.client.Adresse;
