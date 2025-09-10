@@ -1,6 +1,6 @@
 package fr.eni.cave.repository;
 
-import fr.eni.cave.bo.Client;
+import fr.eni.cave.bo.client.Client;
 import fr.eni.cave.bo.client.Adresse;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

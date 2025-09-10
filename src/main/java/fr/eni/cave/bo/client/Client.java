@@ -1,6 +1,5 @@
-package fr.eni.cave.bo;
+package fr.eni.cave.bo.client;
 
-import fr.eni.cave.bo.client.Adresse;
 import jakarta.persistence.*;
 import lombok.*;
 
