@@ -1,9 +1,9 @@
 package fr.eni.cave.repository.vin;
 
 
-import fr.eni.cave.vin.Bouteille;
-import fr.eni.cave.vin.Couleur;
-import fr.eni.cave.vin.Region;
+import fr.eni.cave.bo.vin.Bouteille;
+import fr.eni.cave.bo.vin.Couleur;
+import fr.eni.cave.bo.vin.Region;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

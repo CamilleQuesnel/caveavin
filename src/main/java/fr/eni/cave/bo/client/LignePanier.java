@@ -1,6 +1,7 @@
 package fr.eni.cave.bo.client;
 
 
+import fr.eni.cave.bo.vin.Bouteille;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,7 +12,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@EqualsAndHashCode (of = {"id"})
+@EqualsAndHashCode
 @Table(name = "CAV_LINE")
 public class LignePanier {
     @Id
@@ -24,4 +25,9 @@ public class LignePanier {
 
     @Column(name = "PRICE")
     private float prix;
+
+    @ManyToOne()
+    @JoinColumn(name = "BOTTLE_ID")
+    @EqualsAndHashCode.Exclude
+    private Bouteille bouteille;
 }

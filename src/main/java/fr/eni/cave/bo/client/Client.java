@@ -2,30 +2,18 @@ package fr.eni.cave.bo.client;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 @Getter
 @Setter
-@ToString
+@ToString(callSuper=true)
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = {"pseudo"})
-@Builder
+@SuperBuilder
 @Entity
 @Table(name="CAV_CLIENT")
-public class Client {
-    @Id
-    @Column(name="LOGIN", unique=true, nullable=false)
-    private String pseudo;
+public class Client extends Utilisateur {
 
-    @ToString.Exclude
-    @Column(name="PASSWORD")
-    private String password;
-
-    @Column(name="LAST_NAME")
-    private String nom;
-
-    @Column(name="FIRST_NAME")
-    private String prenom;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER,orphanRemoval = true)
     @JoinColumn(name = "ADDRESS_ID")

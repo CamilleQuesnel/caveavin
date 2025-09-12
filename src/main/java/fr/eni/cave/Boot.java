@@ -14,7 +14,7 @@ public class Boot implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        Client clientBob = Client.builder().pseudo("Bob l'éponge").prenom("bob").nom("l'éponge").password("azerty").build();
-        clientRepository.save(clientBob);
+//        Client clientBob = Client.builder().pseudo("Bob l'éponge").prenom("bob").nom("l'éponge").password("azerty").build();
+//        clientRepository.save(clientBob);
     }
 }

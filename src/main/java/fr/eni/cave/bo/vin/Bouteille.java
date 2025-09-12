@@ -1,4 +1,4 @@
-package fr.eni.cave.vin;
+package fr.eni.cave.bo.vin;
 
 import jakarta.persistence.*;
 import lombok.*;
