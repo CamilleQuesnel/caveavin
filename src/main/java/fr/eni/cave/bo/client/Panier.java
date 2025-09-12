@@ -3,6 +3,7 @@ package fr.eni.cave.bo.client;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.apache.catalina.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,4 +39,7 @@ public class Panier {
     @JoinColumn(name = "SHOPPING_CART_ID")
     private List<LignePanier> lignes = new ArrayList<>();
 
+    @ManyToOne()
+    @JoinColumn(name = "LOGIN")
+    private Client client;
 }

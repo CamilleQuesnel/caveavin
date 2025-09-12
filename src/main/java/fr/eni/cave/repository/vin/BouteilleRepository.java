@@ -1,6 +1,8 @@
 package fr.eni.cave.repository.vin;
 
 import fr.eni.cave.bo.vin.Bouteille;
+import fr.eni.cave.bo.vin.Couleur;
+import fr.eni.cave.bo.vin.Region;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -12,9 +14,9 @@ import java.util.List;
 public interface BouteilleRepository extends JpaRepository<Bouteille, Integer> {
 
 
-    List<Bouteille> findByRegion(String region);
+    List<Bouteille> findByRegion(Region region);
 
 
-    List<Bouteille> findByCouleur(String couleur);
+    List<Bouteille> findByCouleur(Couleur couleur);
 
 }
