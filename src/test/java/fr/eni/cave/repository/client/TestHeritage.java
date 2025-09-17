@@ -4,14 +4,15 @@ import fr.eni.cave.bo.client.Adresse;
 import fr.eni.cave.bo.client.Client;
 import fr.eni.cave.bo.client.Proprio;
 import fr.eni.cave.bo.client.Utilisateur;
+import fr.eni.cave.dal.client.ClientRepository;
+import fr.eni.cave.dal.client.ProprioRepository;
+import fr.eni.cave.dal.client.UtilisateurRepository;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest

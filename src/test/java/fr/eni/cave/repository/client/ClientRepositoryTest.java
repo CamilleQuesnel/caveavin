@@ -1,6 +1,7 @@
 package fr.eni.cave.repository.client;
 
 import fr.eni.cave.bo.client.Client;
+import fr.eni.cave.dal.client.ClientRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

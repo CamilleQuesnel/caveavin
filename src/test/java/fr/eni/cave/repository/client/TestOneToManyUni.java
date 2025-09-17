@@ -2,6 +2,8 @@ package fr.eni.cave.repository.client;
 
 import fr.eni.cave.bo.client.LignePanier;
 import fr.eni.cave.bo.client.Panier;
+import fr.eni.cave.dal.client.LignePanierRepository;
+import fr.eni.cave.dal.client.PanierRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

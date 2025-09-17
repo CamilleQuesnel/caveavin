@@ -1,7 +1,6 @@
 package fr.eni.cave;
 
-import fr.eni.cave.bo.client.Client;
-import fr.eni.cave.repository.client.ClientRepository;
+import fr.eni.cave.dal.client.ClientRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;

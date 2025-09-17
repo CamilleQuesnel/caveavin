@@ -1,4 +1,4 @@
-package fr.eni.cave.repository.client;
+package fr.eni.cave.dal.client;
 
 import fr.eni.cave.bo.client.LignePanier;
 import org.springframework.data.jpa.repository.JpaRepository;
